@@ -1,0 +1,239 @@
+---
+
+---
+
+<footer class="footer">
+  <div class="container footer-container">
+    <!-- Left Column: Branding and description -->
+    <div class="footer-about">
+      <a href="#inicio" class="footer-logo">
+        <svg
+          width="32"
+          height="32"
+          viewBox="0 0 100 100"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          class="logo-icon"
+        >
+          <path
+            d="M50 15V85M25 50H75M35 30L65 50L35 70V30Z"
+            stroke="#b89753"
+            stroke-width="8"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
+          <line
+            x1="65"
+            y1="30"
+            x2="65"
+            y2="70"
+            stroke="#b89753"
+            stroke-width="8"
+            stroke-linecap="round"></line>
+        </svg>
+        <div class="logo-text">
+          <span class="logo-main">PSV INDUSTRIAL</span>
+          <span class="logo-sub">S.A. DE C.V.</span>
+        </div>
+      </a>
+      <p class="footer-desc">
+        Suministro integral de instrumentación industrial, calibración de
+        equipos críticos y mantenimiento certificado a válvulas de seguridad y
+        control en toda la República Mexicana.
+      </p>
+    </div>
+
+    <!-- Center Column: Navigation -->
+    <div class="footer-links-group">
+      <h4 class="footer-title">Enlaces de Interés</h4>
+      <ul class="footer-links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+        <li><a href="#servicios-productos">Servicios y Productos</a></li>
+        <li><a href="#marcas-aliadas">Marcas Aliadas</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+
+    <!-- Right Column: Legal Notice 
+    <div class="footer-legal-notice">
+      <h4 class="footer-title">Nota Legal</h4>
+      <p class="legal-text">
+        Las marcas, logotipos y certificados comerciales aquí expuestos (tales como ICOSO, Stafsjö, OleumTech, Ebro, IMI, FLV, AMS, ARI) son marcas registradas propiedad de sus respectivos fabricantes y titulares legales. Se presentan en este portal web únicamente con fines informativos, de referencia técnica y catálogo comercial de suministros.
+      </p>
+    </div>
+
+  -->
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container footer-bottom-container">
+      <p class="copyright">
+        &copy; {new Date().getFullYear()} PSV Industrial S.A. de C.V. Todos los derechos
+        reservados.
+      </p>
+      <div class="footer-bottom-links">
+        <a href="#contacto" class="hover-link-footer">Aviso de Privacidad</a>
+        <span class="divider">|</span>
+        <a href="#contacto" class="hover-link-footer">Términos y Condiciones</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background-color: #034a48;
+    color: #dbeeed;
+    padding-top: 5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .footer-container {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1.5fr;
+    gap: 4rem;
+    margin-bottom: 4rem;
+  }
+
+  /* Branding column */
+  .footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .logo-text {
+    display: flex;
+    flex-direction: column;
+    color: var(--white);
+  }
+
+  .logo-main {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 1.15rem;
+    letter-spacing: 0.05em;
+    line-height: 1.1;
+  }
+
+  .logo-sub {
+    font-size: 0.65rem;
+    letter-spacing: 0.25em;
+    color: var(--accent);
+    font-weight: 600;
+  }
+
+  .footer-desc {
+    color: #adcecc;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    max-width: 360px;
+  }
+
+  /* Title */
+  .footer-title {
+    font-size: 1.1rem;
+    color: var(--white);
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+  }
+
+  .footer-title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background-color: var(--accent);
+  }
+
+  /* Links */
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .footer-links a {
+    color: #adcecc;
+    font-size: 0.9rem;
+    transition: color var(--transition-fast);
+  }
+
+  .footer-links a:hover {
+    color: var(--accent-light);
+    transform: translateX(4px);
+    display: inline-block;
+  }
+
+  /* Legal Notice */
+  .legal-text {
+    font-size: 0.8rem;
+    color: #adcecc;
+    line-height: 1.6;
+    text-align: justify;
+  }
+
+  /* Bottom bar */
+  .footer-bottom {
+    background-color: #01302e;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 1.5rem 0;
+  }
+
+  .footer-bottom-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: 0.85rem;
+    color: #adcecc;
+  }
+
+  .footer-bottom-links {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .hover-link-footer {
+    transition: color var(--transition-fast);
+  }
+
+  .hover-link-footer:hover {
+    color: var(--accent);
+  }
+
+  .divider {
+    color: rgba(255, 255, 255, 0.15);
+  }
+
+  /* Responsive Design */
+  @media (max-width: 992px) {
+    .footer-container {
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+    }
+    .footer-legal-notice {
+      grid-column: span 2;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .footer-container {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+    .footer-legal-notice {
+      grid-column: span 1;
+    }
+    .footer-bottom-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+</style>

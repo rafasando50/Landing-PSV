@@ -1,0 +1,317 @@
+---
+
+---
+
+<header class="header">
+  <div class="container header-container">
+    <a href="#inicio" class="logo-area">
+      <!-- Golden Valve/Diode SVG icon -->
+      <svg
+        width="40"
+        height="40"
+        viewBox="0 0 100 100"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        class="logo-icon"
+      >
+        <path
+          d="M50 15V85M25 50H75M35 30L65 50L35 70V30Z"
+          stroke="#b89753"
+          stroke-width="8"
+          stroke-linecap="round"
+          stroke-linejoin="round"></path>
+        <line
+          x1="65"
+          y1="30"
+          x2="65"
+          y2="70"
+          stroke="#b89753"
+          stroke-width="8"
+          stroke-linecap="round"></line>
+      </svg>
+      <div class="logo-text">
+        <span class="logo-main">PSV INDUSTRIAL</span>
+      </div>
+    </a>
+
+    <nav class="nav-desktop">
+      <a href="#inicio" class="nav-link active">Inicio</a>
+      <a href="#sobre-nosotros" class="nav-link">Nosotros</a>
+      <a href="#servicios-productos" class="nav-link">Servicios y Productos</a>
+      <a href="#marcas-aliadas" class="nav-link">Marcas</a>
+      <a href="#contacto" class="nav-link">Contacto</a>
+    </nav>
+
+    <div class="header-actions">
+      <a href="#contacto" class="btn btn-outline-white btn-sm-header">Cotizar</a
+      >
+      <button class="menu-toggle" aria-label="Toggle Menu" id="mobile-menu-btn">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Navigation Overlay -->
+  <div class="nav-mobile-overlay" id="nav-mobile-menu">
+    <nav class="nav-mobile-links">
+      <a href="#inicio" class="mobile-link">Inicio</a>
+      <a href="#sobre-nosotros" class="mobile-link">Nosotros</a>
+      <a href="#servicios-productos" class="mobile-link"
+        >Servicios y Productos</a
+      >
+      <a href="#marcas-aliadas" class="mobile-link">Marcas</a>
+      <a href="#contacto" class="mobile-link">Contacto</a>
+      <a href="#contacto" class="btn btn-primary mobile-btn"
+        >Solicitar Cotización</a
+      >
+    </nav>
+  </div>
+</header>
+
+<style>
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(6, 122, 119, 0.95);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    transition: background var(--transition-normal);
+  }
+
+  .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+  }
+
+  .logo-area {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .logo-icon {
+    flex-shrink: 0;
+    transition: transform var(--transition-normal);
+  }
+
+  .logo-area:hover .logo-icon {
+    transform: rotate(15deg) scale(1.05);
+  }
+
+  .logo-text {
+    display: flex;
+    flex-direction: column;
+    color: var(--white);
+  }
+
+  .logo-main {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 1.25rem;
+    letter-spacing: 0.05em;
+    line-height: 1.1;
+  }
+
+  .logo-sub {
+    font-size: 0.7rem;
+    letter-spacing: 0.25em;
+    color: var(--accent);
+    font-weight: 600;
+  }
+
+  .nav-desktop {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .nav-link {
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding: 0.5rem 0;
+    position: relative;
+  }
+
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--white);
+    transition: width var(--transition-normal);
+  }
+
+  .nav-link:hover,
+  .nav-link.active {
+    color: var(--white);
+  }
+
+  .nav-link:hover::after,
+  .nav-link.active::after {
+    width: 100%;
+  }
+
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .btn-sm-header {
+    padding: 0.5rem 1.25rem;
+    font-size: 0.875rem;
+  }
+
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 18px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1100;
+  }
+
+  .menu-toggle .bar {
+    width: 100%;
+    height: 2px;
+    background-color: var(--white);
+    transition: all var(--transition-normal);
+  }
+
+  /* Mobile overlay navigation */
+  .nav-mobile-overlay {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 80px);
+    background: var(--primary-hover);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+    transition: all var(--transition-normal);
+    z-index: 999;
+  }
+
+  .nav-mobile-overlay.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .nav-mobile-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .mobile-link {
+    color: var(--white);
+    font-size: 1.5rem;
+    font-family: var(--font-heading);
+    font-weight: 500;
+    transition: color var(--transition-fast);
+  }
+
+  .mobile-link:hover {
+    color: var(--accent);
+  }
+
+  .mobile-btn {
+    margin-top: 1rem;
+  }
+
+  @media (max-width: 992px) {
+    .nav-desktop {
+      display: none;
+    }
+
+    .menu-toggle {
+      display: flex;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .btn-sm-header {
+      display: none;
+    }
+  }
+
+  /* Hamburger Active Animation */
+  .menu-toggle.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+</style>
+
+<script>
+  // Mobile menu toggle script
+  const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+  const mobileMenu = document.getElementById("nav-mobile-menu");
+  const mobileLinks = document.querySelectorAll(".mobile-link");
+
+  if (mobileMenuBtn && mobileMenu) {
+    mobileMenuBtn.addEventListener("click", () => {
+      mobileMenuBtn.classList.toggle("active");
+      mobileMenu.classList.toggle("open");
+      // Prevent body scrolling when mobile menu is open
+      document.body.classList.toggle("no-scroll");
+    });
+
+    mobileLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        mobileMenuBtn.classList.remove("active");
+        mobileMenu.classList.remove("open");
+        document.body.classList.remove("no-scroll");
+      });
+    });
+  }
+
+  // Active link highlight on scroll
+  const sections = document.querySelectorAll("section[id]");
+  window.addEventListener("scroll", () => {
+    let scrollY = window.pageYOffset;
+    sections.forEach((current) => {
+      const sectionHeight = (current as HTMLElement).offsetHeight;
+      const sectionTop = (current as HTMLElement).offsetTop - 100;
+      const sectionId = current.getAttribute("id");
+
+      const desktopLink = document.querySelector(
+        `.nav-desktop a[href*=${sectionId}]`,
+      );
+      if (desktopLink) {
+        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+          desktopLink.classList.add("active");
+        } else {
+          desktopLink.classList.remove("active");
+        }
+      }
+    });
+  });
+</script>
