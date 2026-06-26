@@ -1,70 +1,88 @@
 ---
-import '../styles/global.css';
-import Header from '../components/Header.astro';
-import Intro from '../components/Intro.astro';
-import About from '../components/About.astro';
-import Catalog from '../components/Catalog.astro';
-import Partners from '../components/Partners.astro';
-import Contact from '../components/Contact.astro';
-import Footer from '../components/Footer.astro';
+import "../styles/global.css";
+import Header from "../components/Header.astro";
+import Intro from "../components/Intro.astro";
+import About from "../components/About.astro";
+import Catalog from "../components/Catalog.astro";
+import Partners from "../components/Partners.astro";
+import Contact from "../components/Contact.astro";
+import Footer from "../components/Footer.astro";
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		
-		<!-- SEO Meta Tags -->
-		<title>PSV Industrial | Suministro de Válvulas, Calibración e Instrumentación</title>
-		<meta name="description" content="PSV Industrial S.A. de C.V. - Distribuidor oficial de válvulas de seguridad ICOSO, válvulas de guillotina Stafsjö e instrumentación industrial OleumTech. Soporte de ingeniería, mantenimiento y calibración certificada." />
-		<meta name="keywords" content="PSV Industrial, valvulas de seguridad, ICOSO, Stafsjo, OleumTech, calibracion de valvulas, mantenimiento industrial, instrumentacion industrial, Perry Johnson ISO 9001" />
-		<meta name="robots" content="index, follow" />
-		<link rel="canonical" href="https://psvindustrial.com.mx/" />
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
 
-		<!-- Open Graph / Facebook -->
-		<meta property="og:type" content="website" />
-		<meta property="og:title" content="PSV Industrial | Suministro de Válvulas, Calibración e Instrumentación" />
-		<meta property="og:description" content="Portafolio integral de suministros industriales, calibración oficial de instrumentación y mantenimiento certificado ISO 9001:2015." />
-		<meta property="og:url" content="https://psvindustrial.com.mx/" />
+    <!-- SEO Meta Tags -->
+    <title>PSV Industrial</title>
+    <meta
+      name="description"
+      content="PSV Industrial S.A. de C.V. - Distribuidor oficial de válvulas de seguridad ICOSO, válvulas de guillotina Stafsjö e instrumentación industrial OleumTech. Soporte de ingeniería, mantenimiento y calibración certificada."
+    />
+    <meta
+      name="keywords"
+      content="PSV Industrial, valvulas de seguridad, ICOSO, Stafsjo, OleumTech, calibracion de valvulas, mantenimiento industrial, instrumentacion industrial, Perry Johnson ISO 9001"
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://psvindustrial.com.mx/" />
 
-		<!-- Twitter -->
-		<meta property="twitter:card" content="summary_large_image" />
-		<meta property="twitter:title" content="PSV Industrial | Suministro de Válvulas, Calibración e Instrumentación" />
-		<meta property="twitter:description" content="Portafolio integral de suministros industriales, calibración oficial de instrumentación y mantenimiento certificado ISO 9001:2015." />
-	</head>
-	<body>
-		<!-- Sticky Header / Navigation -->
-		<Header />
-		
-		<main>
-			<!-- Intro Section -->
-			<Intro />
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="PSV Industrial | Suministro de Válvulas, Calibración e Instrumentación"
+    />
+    <meta
+      property="og:description"
+      content="Portafolio integral de suministros industriales, calibración oficial de instrumentación y mantenimiento certificado ISO 9001:2015."
+    />
+    <meta property="og:url" content="https://psvindustrial.com.mx/" />
 
-			<!-- About Section (Sobre Nosotros, Misión, Visión) -->
-			<About />
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:title"
+      content="PSV Industrial | Suministro de Válvulas, Calibración e Instrumentación"
+    />
+    <meta
+      property="twitter:description"
+      content="Portafolio integral de suministros industriales, calibración oficial de instrumentación y mantenimiento certificado ISO 9001:2015."
+    />
+  </head>
+  <body>
+    <!-- Sticky Header / Navigation -->
+    <Header />
 
-			<!-- Catalog Section (Servicios y Productos) -->
-			<Catalog />
+    <main>
+      <!-- Intro Section -->
+      <Intro />
 
-			<!-- Allied Brands Section (Emphasis on ICOSO) -->
-			<Partners />
+      <!-- About Section (Sobre Nosotros, Misión, Visión) -->
+      <About />
 
-			<!-- Contact Section (Info card & Form) -->
-			<Contact />
-		</main>
+      <!-- Catalog Section (Servicios y Productos) -->
+      <Catalog />
 
-		<!-- Footer Section -->
-		<Footer />
-	</body>
+      <!-- Allied Brands Section (Emphasis on ICOSO) -->
+      <Partners />
+
+      <!-- Contact Section (Info card & Form) -->
+      <Contact />
+    </main>
+
+    <!-- Footer Section -->
+    <Footer />
+  </body>
 </html>
 
 <style is:global>
-	/* Small helper class to prevent scroll when menu is open */
-	body.no-scroll {
-		overflow: hidden;
-	}
+  /* Small helper class to prevent scroll when menu is open */
+  body.no-scroll {
+    overflow: hidden;
+  }
 </style>
