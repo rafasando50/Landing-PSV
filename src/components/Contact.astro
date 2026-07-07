@@ -89,7 +89,7 @@
             <span class="method-label">Correo Electrónico</span>
             <a
               href="mailto:ventas@psvindustrial.com.mx"
-              class="method-value hover-link">ventas1@psvindustrial.mx</a
+              class="method-value hover-link">ventas2@psvindustrial.mx</a
             >
           </div>
         </div>
@@ -517,7 +517,8 @@
         .catch((error) => {
           console.error(error);
           statusMessage.className = "form-status error";
-          statusMessage.innerHTML = "<strong>Error:</strong> Hubo un problema de conexión al enviar el mensaje.";
+          statusMessage.innerHTML =
+            "<strong>Error:</strong> Hubo un problema de conexión al enviar el mensaje.";
         })
         .finally(() => {
           // Reset button
